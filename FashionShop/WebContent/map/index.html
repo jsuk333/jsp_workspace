@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+#map{
+	width:800px;
+	height:100%;
+	border:1px solid red;	
+	background:yellow;
+}
+<script>
+var map;
+var area;
+
+window.addEventListener("load", function{
+	init();
+});
+function init(){
+	area=document.getElementById("area");
+	var options={
+		center: new google.maps.LatLng(51.5, -0.2), zoom: 10
+	}
+	map = new google.maps.Map(area, options);
+}
+</script>
+</style>
+</head>
+<body>
+<div id="area"></div>
+</body>
+</html>

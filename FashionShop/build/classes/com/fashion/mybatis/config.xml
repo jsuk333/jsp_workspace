@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.fashion.product.domain.Product" alias="Product"/>
+		<typeAlias type="com.fashion.product.domain.TopCategory" alias="TopCategory"/>
+		<typeAlias type="com.fashion.product.domain.SubCategory" alias="SubCategory"/>
+		<typeAlias type="com.fashion.product.domain.Comments" alias="Comments"/>
+	</typeAliases> 
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="oracle.jdbc.driver.OracleDriver" />
+				<property name="url" value="jdbc:oracle:thin:@localhost:1521:XE" />
+				<property name="username" value="fashion" />
+				<property name="password" value="fashion" />
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<mappers>
+		<mapper resource="com/fashion/mybatis/ProductMapper.xml" />
+		<mapper resource="com/fashion/mybatis/TopCategoryMapper.xml" />
+		<mapper resource="com/fashion/mybatis/SubCategoryMapper.xml" />
+		<mapper resource="com/fashion/mybatis/CommentsMapper.xml" />
+	</mappers>
+</configuration>
+
+
+
+
+
+
+

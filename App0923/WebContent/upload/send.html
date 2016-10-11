@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script>
+	function regist(){
+		//클라이언트가 전송하게될 데이터가 문자열이 아닌,
+		//바이너리 파일 수준이므로, 전송벙법은 스트림을 지원하는
+		//post 방식을 사용한다.
+		form1.action="/upload/upload.jsp";
+		form1.submit();
+	}
+</script>
+</head>
+<body>
+	<form name="form1" method="post" enctype="multipart/form-data">
+		<pre>
+			파일설명<input type="text" name="msg">
+			파일선택<input type="file" name="myFile">
+			<input type="button" value="업로드하기" onClick="regist()">
+		</pre>
+	</form>
+</body>
+</html>
