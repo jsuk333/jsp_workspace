@@ -109,9 +109,11 @@
 			</Context>
 			<Context docBase="DataMigration" path="/DataMigration" reloadable="true" source="org.eclipse.jst.jee.server:DataMigration">
 			
-			</Context><Context docBase="FashionShop" path="/" reloadable="true" source="org.eclipse.jst.jee.server:FashionShop">
+			</Context><Context docBase="FashionShop" path="/FashionShop" reloadable="true" source="org.eclipse.jst.jee.server:FashionShop">
 				<Resource auth="Container" driverClassName="oracle.jdbc.OracleDriver" maxActive="20" maxIdle="10" maxWait="-1" name="jdbc/oracle" password="fashion" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:XE" username="fashion"/>
 			</Context><Context docBase="MapApp" path="/MapApp" reloadable="true" source="org.eclipse.jst.jee.server:MapApp">
+				<Resource auth="Container" driverClassName="oracle.jdbc.OracleDriver" maxActive="20" maxIdle="10" maxWait="-1" name="jdbc/oracle" password="fashion" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:XE" username="fashion"/>
+			</Context><Context docBase="Practice1" path="/" reloadable="true" source="org.eclipse.jst.jee.server:Practice1">
 				<Resource auth="Container" driverClassName="oracle.jdbc.OracleDriver" maxActive="20" maxIdle="10" maxWait="-1" name="jdbc/oracle" password="fashion" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:XE" username="fashion"/>
 			</Context></Host>
 		</Engine>
