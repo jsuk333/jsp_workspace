@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Guest">
+	<!-- select 문의 결과 레코드를 dto에 자동으로 맵핑해준다고
+	하여 , SqlMapper 라고 한다!! -->
+	<insert id="insert" parameterType="Guest" >
+		insert into guest(guest_id,	guest_name,	tell1,	tell2,	tell3,	post1,	post2,	home1,	home2)
+		values(seq_guest.nextval,#{guest_name},#{tell1},#{tell2},#{tell3},#{post1},#{post2},#{home1},#{home2})
+		<selectKey  order="AFTER" keyProperty="guest_id" resultType="int">
+			select seq_guest.currval as guest_id from dual
+		</selectKey>
+	</insert>
+</mapper>

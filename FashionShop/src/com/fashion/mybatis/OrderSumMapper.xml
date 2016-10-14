@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="OrderSum">
+	<!-- select 문의 결과 레코드를 dto에 자동으로 맵핑해준다고
+	하여 , SqlMapper 라고 한다!! -->
+	<insert id="insert" parameterType="OrderSum">
+	<selectKey order="AFTER" keyProperty="ordersum_id" resultType="int" >
+		select seq_ordersum.currval as ordersum_id from dual
+	</selectKey>
+		insert into OrderSum(ordersum_id,customer_id) values(seq_ordersum.nextval,#{customer_id})
+	</insert>
+</mapper>

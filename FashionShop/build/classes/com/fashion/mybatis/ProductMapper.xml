@@ -15,4 +15,7 @@
 	<select id="select" resultType="Product" parameterType="int">
 		select * from product where product_id=#{product_id}
 	</select>
+	<select id="selectByEventInfoId" resultType="Product" parameterType="int">
+		select p.*	from EventProduct e, PRODUCT p	where e.product_id=p.PRODUCT_ID and e.EVENTINFO_ID=#{eventinfo_id}
+	</select>
 </mapper>

@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=euc-kr"%>
+<%-- <%@ page contentType="text/html;charset=euc-kr"%>
 <%@ page import="java.util.*"%>
 <%@ page import="model.manager.*"%>
 <%@ page import="model.formbean.*"%>
@@ -30,3 +30,4 @@ pm.insertPlanProduct(tableName,fkey);
 
 
 
+ --%>

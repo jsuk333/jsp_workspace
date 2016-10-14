@@ -208,7 +208,7 @@ function updateCart(product_id,num){
                               <td height="36" colspan="11" align="center">━ 총 주문금액 <span class="style3"><%=MoneyFormat.getResult(sum) %></span>원 </td>
                             </tr>
                             <tr>
-                              <td height="1" colspan="11" align="center"><a href="step1.html"><img src="../images/cart/btn_cash.gif" width="70" height="26" border="0" /></a>&nbsp;<img src="../images/cart/btn_back.gif" width="70" height="26" /></td>
+                              <td height="1" colspan="11" align="center"><a href="step1.jsp"><img src="../images/cart/btn_cash.gif" width="70" height="26" border="0" /></a>&nbsp;<img src="../images/cart/btn_back.gif" width="70" height="26" /></td>
                             </tr>
                         </table>
                          </form>

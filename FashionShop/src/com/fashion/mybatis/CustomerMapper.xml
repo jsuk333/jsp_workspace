@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Customer">
+	<!-- select 문의 결과 레코드를 dto에 자동으로 맵핑해준다고
+	하여 , SqlMapper 라고 한다!! -->
+	<insert id="insert" parameterType="Customer">
+		<selectKey order="AFTER" keyProperty="customer_id" resultType="int">
+			select seq_customer.currval as customer_id from dual
+		</selectKey>
+			insert into customer(customer_id,customer_type,type_id) values(seq_customer.nextval,#{customer_type},#{type_id})
+	</insert>
+</mapper>
