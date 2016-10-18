@@ -1,0 +1,2 @@
+/movie.do=com.sds.controller.MovieController
+/blood.do=com.sds.controller.BloodController

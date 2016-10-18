@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>MVCProject</display-name>
+  <servlet>
+  	<servlet-name>myServlet</servlet-name>
+  	<servlet-class>com.sds.mvc.controller.MovieController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>myServlet</servlet-name>
+  <url-pattern>/movie</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>myServlet2</servlet-name>
+  	<servlet-class>com.sds.mvc.controller.BloodController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>myServlet2</servlet-name>
+  <url-pattern>/blood</url-pattern>
+  </servlet-mapping>
+</web-app>
