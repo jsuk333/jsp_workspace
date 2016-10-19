@@ -18,3 +18,4 @@
 /board/view/list=/board/list.jsp
 /board/view/write=/board/list.do
 /board/view/delete=/board/list.do
+/board/view/edit=/board/detail.jsp

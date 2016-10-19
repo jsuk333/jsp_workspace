@@ -1,21 +1,26 @@
 package com.sds.board.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.sds.board.model.BoardDAO;
+import com.sds.board.model.ReBoardDAO;
 import com.sds.controller.Controller;
 
-public class DeleteController implements Controller{
-	BoardDAO boardDAO=new BoardDAO();
+public class ListController implements Controller{
+
+	ReBoardDAO dao=new ReBoardDAO();
 	public String execute(HttpServletRequest req, HttpServletResponse resp) {
-		String board_id=req.getParameter("board_id");
-		int result=boardDAO.delete(Integer.parseInt(board_id));
-		return "/board/view/delete";
+		List list=dao.selectAll();
+		req.setAttribute("list", list);
+		return "/reboard/view/list";
 	}
+
 	
 	public boolean isForward() {
 	
 		return true;
 	}
+	
 }

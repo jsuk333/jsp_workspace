@@ -73,7 +73,7 @@ function regist(){
   <tr>
     <td height="30" align="right" style="padding-right:2px;">
 	<img src="/board/images/write_btin.gif" width="61" height="20" onClick="regist()"> 
-	<a href="list.jsp"><img src="/board/images/list_btn.gif" width="61" height="20"></a>	</td>
+	<a href="list.do"><img src="/board/images/list_btn.gif" width="61" height="20"></a>	</td>
   </tr>
   <tr>
     <td height="1" bgcolor="#CCCCCC"></td>

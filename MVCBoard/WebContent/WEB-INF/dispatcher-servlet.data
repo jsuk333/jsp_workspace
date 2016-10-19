@@ -1,0 +1,15 @@
+#controller mapping
+/reboard/list.do=com.sds.board.controller.ListController
+/reboard/write.do=com.sds.board.controller.WriteController
+/reboard/detail.do=com.sds.board.controller.DetailController
+/reboard/delete.do=com.sds.board.controller.DeleteController
+/reboard/edit.do=com.sds.board.controller.EditController
+/reboard/reply.do=com.sds.board.controller.ReplyController
+
+#view mapping
+/reboard/view/list=/reboard/list.jsp
+/reboard/view/write=
+/reboard/view/detail=
+/reboard/view/delete=
+/reboard/view/edit=
+/reboard/view/reply=

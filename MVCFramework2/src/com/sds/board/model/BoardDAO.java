@@ -36,4 +36,11 @@ public class BoardDAO {
 		session.close();
 		return result;
 	}
+	public int update(Board board){
+		SqlSession session=manager.getSession();
+		int result=session.insert("Board.update", board);
+		session.commit();
+		session.close();
+		return result;
+	}
 }
